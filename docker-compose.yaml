@@ -1,0 +1,21 @@
+version: '2.4'
+
+services:
+  jenkins:
+    build: jenkins_controller
+    image: jenkins_controller
+    volumes:
+      - ./jenkins_controller/jenkins.yaml:/usr/share/jenkins/ref/jenkins.yaml
+    ports:
+      - 8880:8080
+      - 50000:50000
+    restart: always
+
+  sonarqube:
+    image: sonarqube:10.2.1-community
+    depends_on:
+      - jenkins
+    container_name: sonarqube
+    ports:
+      - 9000:9000
+    restart: always
