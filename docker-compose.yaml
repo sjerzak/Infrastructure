@@ -6,7 +6,6 @@ services:
     #   artifactory:
     #     condition: service_healthy
     build: jenkins_controller
-    image: jenkins_controller
     volumes:
       - ./jenkins_controller/jenkins.yaml:/usr/share/jenkins/ref/jenkins.yaml
     ports:
@@ -24,7 +23,7 @@ services:
     restart: always
 
   jenkins_agent:
-    image: jenkins_agent
+    build: jenkins_agent
     depends_on:
       - jenkins
     container_name: jenkins_agent
