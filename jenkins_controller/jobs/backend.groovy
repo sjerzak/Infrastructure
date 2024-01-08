@@ -5,7 +5,7 @@ pipelineJob('backend') {
                 git {
                     remote {
                         credentials("")
-                        url("https://github.comsjerzak/Backend.git")
+                        url("https://github.com/sjerzak/Backend.git")
                     }
                     branches('main')
                     scriptPath('Jenkinsfile')
