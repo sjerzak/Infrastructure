@@ -8,6 +8,7 @@ services:
     build: jenkins_controller
     volumes:
       - ./jenkins_controller/jenkins.yaml:/usr/share/jenkins/ref/jenkins.yaml
+      - ./jenkins_controller/jobs:/usr/share/jenkins/ref/jobs
     ports:
       - "8880:8080"
       - "50000:50000"
