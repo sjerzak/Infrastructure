@@ -38,8 +38,8 @@ credentials:
           scope: GLOBAL
           username: "jenkins"
       - usernamePassword:
-          description: "adminartiactory"
-          id: "artiactory"
+          description: "adminartifactory"
+          id: "artifactory"
           password: "password"
           scope: GLOBAL
           username: "admin"
